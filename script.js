@@ -145,10 +145,10 @@ selectElement.addEventListener('change', function() {
   // Change the color of the circle based on the selected option
   if (selectedOption === 'forest-6761846.jpg') {
     circleElement.style.backgroundColor = 'black';
-  } else if (selectedOption === 'sunset-4086848.jpg') {
-    circleElement.style.backgroundColor = '#d47bb6';
+  } else if (selectedOption === 'sunset-6911736.jpg') {
+    circleElement.style.backgroundColor = '#411c4a';
   } else if (selectedOption === 'water-2208931.jpg') {
-    circleElement.style.backgroundColor = '#103f47';
+    circleElement.style.backgroundColor = '#06323d';
   }
 });
 
