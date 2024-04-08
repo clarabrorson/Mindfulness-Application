@@ -99,3 +99,129 @@ body {
     transform: scale(1);
   }
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 20%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 30%; 
+    height: auto;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #120808;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgba(255, 0, 128, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 200px;
+    height: 100vh;
+    z-index: 1000;
+  }
+  
+  .menu-bar {
+    width: 15%;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+  
+  #menu-items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #menu-items a {
+    color: #fff;
+    text-decoration: none;
+    margin: 20px 0;
+    text-align: left;
+    width: 100%;
+    display: block;
+    font-weight: 100;
+  }
+  
+  .play-btn {
+    width: 50px; 
+    height: 50px; 
+    background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
+    border-radius: 50%;
+    position: fixed; 
+    top:40 px; 
+    right: 40px; 
+    box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
+  }
+  
+  
+  /* triangle */
+  
+  .play-btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%); 
+    transform: translateX(-50%) translateY(-50%); 
+    transform-origin: center center;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent; 
+    border-bottom: 10px solid transparent; 
+    border-left: 15px solid #fff; 
+    z-index: 100;
+    -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  
+  
+  label {
+    font-size: 18px;
+    color: #f6f1f1;
+    font-weight: 300;
+  }
+  
+  #background-select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f0f4;
+    margin-top: 10px; /* Add some space between the label and the select */
+    font-family: 'Poppins', sans-serif; /* Set the font to Poppins */
+    font-weight: 600;
+  }
