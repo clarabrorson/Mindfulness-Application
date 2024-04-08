@@ -154,29 +154,30 @@ window.onclick = function(event) {
 // This function lets the user select a background image
 const backgroundSelect = document.getElementById('background-select');
 
-// This event listener is used to listen for changes on the select element
-backgroundSelect.addEventListener('change', function() {
-    const selectedBackground = backgroundSelect.value;
-    // This line of code changes the background image of the body element to the selected background
-    document.body.style.backgroundImage = `url(${selectedBackground})`;
+// This event listener is used to listen for clicks on the buttons
+backgroundSelect.addEventListener('click', function(e) {
+    if (e.target.tagName === 'BUTTON') {
+        const selectedBackground = e.target.value;
+        // This line of code changes the background image of the body element to the selected background
+        document.body.style.backgroundImage = `url(${selectedBackground})`;
+    }
 });
 
 // This function is used to change the background color of the circle based on the selected option
-const selectElement = document.getElementById('background-select');
 const circleElement = document.querySelector('.circle');
 
-
-selectElement.addEventListener('change', function() {
-  
-  const selectedOption = selectElement.value;
-  // This if statement is used to change the background color of the circle based on the selected option
-  if (selectedOption === 'forest-6761846.jpg') {
-    circleElement.style.backgroundColor = 'black';
-  } else if (selectedOption === 'sunset-6911736.jpg') {
-    circleElement.style.backgroundColor = '#411c4a';
-  } else if (selectedOption === 'water-2208931.jpg') {
-    circleElement.style.backgroundColor = '#06323d';
-  }
+backgroundSelect.addEventListener('click', function(e) {
+    if (e.target.tagName === 'BUTTON') {
+        const selectedOption = e.target.value;
+        // This if statement is used to change the background color of the circle based on the selected option
+        if (selectedOption === 'forest-6761846.jpg') {
+            circleElement.style.backgroundColor = 'black';
+        } else if (selectedOption === 'sunset-6911736.jpg') {
+            circleElement.style.backgroundColor = '#411c4a';
+        } else if (selectedOption === 'water-2208931.jpg') {
+            circleElement.style.backgroundColor = '#06323d';
+        }
+    }
 });
 
 
