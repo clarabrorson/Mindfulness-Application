@@ -1,12 +1,21 @@
+// BREATHING CIRCLE ANIMATION
+
+// These variables are used to select the container and text elements from the HTML
+//document.querySelector() is a built-in JavaScript function that allows you to select an element from the HTML
 const container = document.querySelector('.container')
 const text = document.querySelector('#text')
 
+// These variables are used to set the total time, breathe time, and hold time for the breathing circle
 const totalTime = 8000
 const breatheTime = 2500
 const holdTime = 2000
 
 breatheCircle()
 
+// This function is used to change the text and class of the container element
+// The text is changed to 'Breathe In' and the class is changed to 'container grow'. This class is used to increase the size of the container element
+// The setTimeout() function is used to delay the change of text and class. This will pause the program allowing the user to hold their breath
+// The text is then changed to 'Hold' and the class is not changed. This will keep the container element at the same size
 function breatheCircle() {
   text.innerHTML = 'Breathe In'
   container.className = 'container grow'
@@ -21,12 +30,20 @@ function breatheCircle() {
   }, breatheTime)
 }
 
+// The setInterval() function is used to call the breatheCircle() function at regular intervals
+// The totalTime variable is used to set the interval time
 setInterval(breatheCircle, totalTime)
+
+// MODAL, MENU AND AUDIO CONTROL
 
 var modal = document.getElementById("myModal");
 var btns = document.querySelectorAll("#menu-items a");
 var span = document.getElementsByClassName("close")[0];
 var audios = document.querySelectorAll("#myModal audio");
+
+// This forEach loop is used to add an event listener to each button element
+// These event listeners will display the modal when a button is clicked
+// The buttons are clicked when the user selects a meditation from the menu
 
 btns.forEach((btn, index) => {
   btn.onclick = function(event) {
@@ -42,27 +59,31 @@ btns.forEach((btn, index) => {
   }
 });
 
+// This event listener is used to close the modal when the close button is clicked
 span.onclick = function() {
     modal.style.display = "none";
-    audios.forEach(audio => audio.pause()); /* Stop all audio */
+    audios.forEach(audio => audio.pause()); 
   }
-  
+
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
-      audios.forEach(audio => audio.pause()); /* Stop all audio */
+      audios.forEach(audio => audio.pause());
     }
   }
 
+// Thisfunction is used to display the menu items when the menu is hovered over
 document.getElementById('menu').addEventListener('mouseover', function() {
     document.getElementById('menu-items').style.display = 'flex';
 });
 
+// This function is used to hide the menu items when the menu is not hovered over
 document.getElementById('menu').addEventListener('mouseout', function() {
     document.getElementById('menu-items').style.display = 'none';
 });
 
-
+// This function get the play button and the audio element from the HTML
+// The addEventListener() function is used to listen for a click event on the play button
 document.querySelector('.play-btn').addEventListener('click', function() {
   var audio = document.getElementById('background_music');
   if (audio.paused) {
@@ -72,8 +93,11 @@ document.querySelector('.play-btn').addEventListener('click', function() {
   }
 });
 
-let wasMusicPlaying = false; // Skapa en ny variabel
+// This variable is used to keep track of whether the music was playing before the modal was opened
+let wasMusicPlaying = false; 
 
+// This forEach loop is used to add an event listener to each button element
+//When a button is clicked, the corresponding audio is played and the background music automatically pauses
 btns.forEach((btn, index) => {
   btn.onclick = function(event) {
     event.preventDefault();
@@ -94,6 +118,7 @@ btns.forEach((btn, index) => {
   }
 });
 
+// When the close button is clicked, the modal is hidden and all audio elements are paused
 span.onclick = function() {
   modal.style.display = "none";
   audios.forEach(audio => {
@@ -102,10 +127,12 @@ span.onclick = function() {
       audio.currentTime = 0;
     }
   });
-  if (wasMusicPlaying) { // Om musiken spelades, återuppta den
+  // if the music was playing, resume it
+  if (wasMusicPlaying) { 
     document.getElementById('background_music').play();
   }
 }
+
 
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -116,33 +143,33 @@ window.onclick = function(event) {
         audio.currentTime = 0;
       }
     });
-    if (wasMusicPlaying) { // Om musiken spelades, återuppta den
+    if (wasMusicPlaying) { 
       document.getElementById('background_music').play();
     }
   }
 }
 
 
-// Referens till select-elementet för bakgrundsbilder
+// BACKGROUND SELECTION FUNCTIONALITY
+// This function lets the user select a background image
 const backgroundSelect = document.getElementById('background-select');
 
-// Lyssna på ändringar i bakgrundsbildsselecten
+// This event listener is used to listen for changes on the select element
 backgroundSelect.addEventListener('change', function() {
     const selectedBackground = backgroundSelect.value;
-    // Tillämpa den valda bakgrundsbilden
+    // This line of code changes the background image of the body element to the selected background
     document.body.style.backgroundImage = `url(${selectedBackground})`;
 });
 
-// Get the select element and the circle element
+// This function is used to change the background color of the circle based on the selected option
 const selectElement = document.getElementById('background-select');
 const circleElement = document.querySelector('.circle');
 
-// Listen for changes on the select element
-selectElement.addEventListener('change', function() {
-  // Get the selected option
-  const selectedOption = selectElement.value;
 
-  // Change the color of the circle based on the selected option
+selectElement.addEventListener('change', function() {
+  
+  const selectedOption = selectElement.value;
+  // This if statement is used to change the background color of the circle based on the selected option
   if (selectedOption === 'forest-6761846.jpg') {
     circleElement.style.backgroundColor = 'black';
   } else if (selectedOption === 'sunset-6911736.jpg') {

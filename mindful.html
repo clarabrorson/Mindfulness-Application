@@ -5,28 +5,36 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>Mindful Coding</title>
     <link rel = "stylesheet" href = "mindful.css">
-     
-    <title>Mindful Coding</title>
+     <title>Mindful Coding</title>
 </head>
+
 <body>
     <h1>Mindful Coding</h1>
-
+    <!-- This is a container for selecting the background image. It contains a label and a dropdown select element. -->
     <div class="background-select-container">
         <div class="label-container">
           <label for="background-select">Select background</label>
-          <select id="background-select">
+          <!-- This is a select dropdown. It contains options for different background images. The value of each option is the filename of the image. -->
+          <select id="background-select"></select>
             <option value="forest-6761846.jpg">Forest</option>
             <option value="sunset-6911736.jpg">Sky</option>
             <option value="water-2208931.jpg">Deep Ocean</option>
           </select>
         </div>
-      </div>
-
+    </div>
+    <!-- 
+    BREATHING CIRCLE
+    This is a container for the breathing circle. 
+    The circle will grow and shrink to guide the users breathing.
+    -->
     <div class="container" id="container">
     <div class="circle"></div>
 
     <p id="text"></p>
-
+    
+    <!-- 
+    This is a container for the pointer, which rotates around the circle to indicate the breathing cycle.
+    -->
     <div class="pointer-container">
         <span class="pointer"></span>
     </div>
