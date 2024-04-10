@@ -290,36 +290,35 @@ It corrects the position of the last button, wich was a little off compared to t
   top: -4px;
 }
 
-#bug {
-  width: 10px; 
-  cursor: pointer; /* Change the cursor to a hand when hovering over the image */
-  
-}
+/* BUG ANIMATION */
 
 /* Tooltip container */
 .tooltip {
-  position: relative;
+  position: fixed;
   display: inline-block;
-  border-bottom: 1px dotted black; /* ta bort? */
+  bottom: 10px;
+  right: 10px;
+
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 100px; 
+  width: 150px; 
   background-color: #0a0a0a;
   color: #fff;
   text-align: center;
-  padding: 10px 0; 
+  padding: 20px 0; 
   border-radius: 5px; 
-  font-size: 17px; 
+  font-size: 16px; 
+  font-weight: 300;
 
   /* Position the tooltip text */
   position: absolute;
   z-index: 1;
   bottom: 100%; 
-  left: 50%;
-  margin-left: -40px; 
+  left: -200%;
+  margin-left: -0px; 
 
   /* Fade in tooltip */
   opacity: 0;
@@ -344,8 +343,43 @@ It corrects the position of the last button, wich was a little off compared to t
   opacity: 1;
 }
 
+.modalQuotes {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: 20%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  width: 30%; 
+  height: auto;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
 
+.modalQuotes-content {
+  background-color: #120808;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 0, 128, 0.8);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+}
 
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
