@@ -283,12 +283,10 @@ The different properties are used to create the triangle shape and style it.
   -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-/*
-BACKGROUD SELECT
-This code styles the background select container and the background buttons.
-*/
-/* This container is used to hold the background buttons
-   It is positioned fixed on the top right corner of the screen.
+/*BACKGROUD SELECT*/
+
+/*This container is used to hold the background buttons.
+  It is positioned fixed on the top right corner of the screen.
  */
 .background-select-container {
   position: fixed;
@@ -325,12 +323,10 @@ This code styles the background select container and the background buttons.
 This is the last child of the background buttons
 It corrects the position of the last button, wich was a little off compared to the others.
 */
-
 .bg-btn:last-child {
   position: relative;
   top: -4px;
 }
-
 
 /* BUG ANIMATION 
   The bug animation is a simple image that works as a button.
@@ -352,43 +348,29 @@ It corrects the position of the last button, wich was a little off compared to t
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 150px; 
-  background-color: #0a0a0a;
+  background-color: transparent;
   color: #fff;
   text-align: center;
   padding: 20px 0; 
   border-radius: 5px; 
   font-size: 16px; 
   font-weight: 300;
-
-  /* Position the tooltip text */
   position: absolute;
   z-index: 1;
   bottom: 100%; 
   left: -200%;
   margin-left: -0px; 
 
-  /* Fade in tooltip */
+  /* Function to make the tooltip appear */
   opacity: 0;
   transition: opacity 0.3s;
-}
-
-/* Tooltip arrow */
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%; 
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
+} 
 
 /* Shows the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-}
+} 
 
 
 
