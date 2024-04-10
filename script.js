@@ -38,7 +38,7 @@ setInterval(breatheCircle, totalTime)
 
 var modal = document.getElementById("myModal");
 var btns = document.querySelectorAll("#menu-items a");
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close-myModal")[0];
 var audios = document.querySelectorAll("#myModal audio");
 
 // This forEach loop is used to add an event listener to each button element
@@ -181,8 +181,9 @@ backgroundSelect.addEventListener('click', function(e) {
 });
 
 // API QUOTES FUNCTIONALITY
-
+/*
 document.getElementById('quoteBug').addEventListener('click', function() {
+  
   fetch("https://type.fit/api/quotes")
       .then(function(response) {
           return response.json();
@@ -223,6 +224,52 @@ document.getElementById('quoteBug').addEventListener('click', function() {
             }
           }
       });
-});
+}); 
+*/
 
+// API QUOTES FUNCTIONALITY
+
+document.getElementById('quoteBug').addEventListener('click', function() {
+  
+  fetch("https://type.fit/api/quotes")
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(data) {
+          var quotesDiv = document.getElementById('modalQuotes');
+          var quoteIndex = 0;
+
+          function updateQuote() {
+              quotesDiv.innerHTML = '';
+              var p = document.createElement('p');
+              p.innerText = data[quoteIndex].text;
+              quotesDiv.appendChild(p);
+              quoteIndex = (quoteIndex + 1) % data.length;
+          }
+
+          updateQuote();
+          setInterval(updateQuote, 10000);
+
+          // Get the modal
+          var modal = document.getElementById("myModalQuotes");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close-myModalQuotes")[0]; // Change "close" to "close-myModalQuotes"
+
+          // When the user clicks on the quoteBug, open the modal 
+          modal.style.display = "block";
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+      });
+}); 
 
