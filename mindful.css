@@ -132,6 +132,50 @@ the modal-content class is for the content inside the modal, and the close class
 }
 
 .modal-content {
+  position: relative;
+  background-color: #120808;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 0, 128, 0.8);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.close-myModal, .close-myModalQuotes {
+  color: #f5f1f1;
+  position: absolute; 
+  top: 0px; 
+  right: 10px; 
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer; 
+}
+
+/* MODAL FOR QUOTES */
+/* This modal classes are for the modal that appears when the bug is clicked.
+  The modalQuotes class is for the modal itself and the modalQuotes-content class is for the content inside the modal.
+*/
+
+.modalQuotes {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: -10%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  width: 30%; 
+  height: auto;
+  overflow: auto;
+  background-color:rgba(0,0,0,0.4);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.modalQuotes-content {
   background-color: #120808;
   margin: auto;
   padding: 20px;
@@ -143,28 +187,11 @@ the modal-content class is for the content inside the modal, and the close class
   flex-direction: column;
 }
 
-.close-myModal, .close-myModalQuotes {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer; /* Add this line */
+#myModalQuotes {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: italic;
 }
-/*
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-*/
 
 /* MENU
 This code styles the menu and the menu items.
@@ -214,7 +241,6 @@ Radial gradient is used to create the button, and a triangle is created using bo
 The box-shadow property is used to create a glowing effect.
 */
 
-
 .play-btn {
   width: 50px; 
   height: 50px; 
@@ -254,7 +280,7 @@ This code styles the background select container and the background buttons.
 */
 
 .background-select-container {
-  position: /*absolute;*/ fixed;
+  position: fixed;
   top: 80px;
   right: 20px;
   background: transparent;
@@ -297,12 +323,18 @@ This code styles the background select container and the background buttons.
 This is the last child of the background buttons
 It corrects the position of the last button, wich was a little off compared to the others.
 */
+
 .bg-btn:last-child {
   position: relative;
   top: -4px;
 }
 
-/* BUG ANIMATION */
+
+/* BUG ANIMATION 
+  The bug animation is a simple image that works as a button.
+  When hovered a tooltip appears with a message. If clicked, a modal with a quote appears.
+  The Quotes are called from an API and are displayed in the modal.
+*/
 
 /* Tooltip container */
 .tooltip {
@@ -350,56 +382,13 @@ It corrects the position of the last button, wich was a little off compared to t
   border-color: #555 transparent transparent transparent;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
+/* Shows the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
 
-.modalQuotes {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  right: -10%;
-  top: 80%;
-  transform: translate(-50%, -50%);
-  width: 30%; 
-  height: auto;
-  overflow: auto;
-  background-color:rgba(0,0,0,0.4);
-  border-radius: 20px;
-  overflow: hidden;
-}
 
-.modalQuotes-content {
-  background-color: #120808;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid rgba(255, 0, 128, 0.8);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-#myModalQuotes {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.close:hover, .close:focus, close-myModalQuotes:hover, .close-myModalQuotes:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 
