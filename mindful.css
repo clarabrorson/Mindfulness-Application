@@ -1,17 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-
-
-/* 
-The CSS code is styling the HTML elements. 
-The body has a background image and the text is styled with the Poppins font.
+/* This border-box property is used to include the padding and border in the element's total width and height.
+   In this case it is used to avoid the overflow of the page when the modal is opened.
 */
-
 * {
   box-sizing: border-box;
 }
 
+/* This is the body of the page. It has a background image and the text is styled with the Poppins font.*/
 body {
   background: #224941 url('forest-6761846.jpg') no-repeat center center/cover;
   color: #fff;
@@ -74,6 +71,11 @@ The keyframes are defining the animations for the circle to grow and shrink, and
   transform-origin: bottom center;
 
 }
+/* @Keyframes are used to create animations in CSS. 
+   In this case, the rotate animation is used to make the pointer rotate around the circle.
+   The from and to properties are used to define the start and end of the animation.
+   This animation will rotate the pointer 360 degrees.
+*/
 
 @keyframes rotate {
   from {
@@ -85,6 +87,10 @@ The keyframes are defining the animations for the circle to grow and shrink, and
   }
 }
 
+/* This grow animation is used to make the circle grow.
+   The from and to properties are used to define the start and end of the animation.
+   This animation will make the circle grow to 20% of its original size.
+*/
 .container.grow {
   animation: grow 3s linear forwards;
 }
@@ -99,6 +105,9 @@ The keyframes are defining the animations for the circle to grow and shrink, and
   }
 }
 
+/* This shrink animation is used to make the circle shrink.
+   The from and to properties are used to define the start and end of the animation.
+*/
 .container.shrink {
   animation: shrink 3s linear forwards;
 }
@@ -278,7 +287,9 @@ The different properties are used to create the triangle shape and style it.
 BACKGROUD SELECT
 This code styles the background select container and the background buttons.
 */
-
+/* This container is used to hold the background buttons
+   It is positioned fixed on the top right corner of the screen.
+ */
 .background-select-container {
   position: fixed;
   top: 80px;
@@ -286,6 +297,10 @@ This code styles the background select container and the background buttons.
   background: transparent;
 }
 
+/* These are the background buttons. They are used to change the background image of the page.
+   It is styled with a radial gradient to create a glowing effect.
+   The box-shadow property is used to create a glowing effect.
+ */
 .bg-btn {
   width: 50px; 
   height: 50px; 
@@ -306,19 +321,6 @@ This code styles the background select container and the background buttons.
   align-items: center;
   cursor: pointer;
 }
-
-.bg-btn::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%); 
-  transform: translateX(-50%) translateY(-50%); 
-  transform-origin: center center;
-  -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
 /*
 This is the last child of the background buttons
 It corrects the position of the last button, wich was a little off compared to the others.
