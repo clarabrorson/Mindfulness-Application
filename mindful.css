@@ -368,6 +368,12 @@ It corrects the position of the last button, wich was a little off compared to t
   flex-direction: column;
 }
 
+#myModalQuotes {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
 .close {
   color: #aaa;
   float: right;
