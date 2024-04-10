@@ -347,7 +347,7 @@ It corrects the position of the last button, wich was a little off compared to t
   display: none;
   position: fixed;
   z-index: 1;
-  right: 20%;
+  right: -10%;
   top: 80%;
   transform: translate(-50%, -50%);
   width: 30%; 
