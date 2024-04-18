@@ -191,53 +191,6 @@ backgroundSelect.addEventListener('click', function(e) {
 });
 
 // API QUOTES FUNCTIONALITY
-/*
-document.getElementById('quoteBug').addEventListener('click', function() {
-  
-  fetch("https://type.fit/api/quotes")
-      .then(function(response) {
-          return response.json();
-      })
-      .then(function(data) {
-          var quotesDiv = document.getElementById('modalQuotes');
-          var quoteIndex = 0;
-
-          function updateQuote() {
-              quotesDiv.innerHTML = '';
-              var p = document.createElement('p');
-              p.innerText = data[quoteIndex].text;
-              quotesDiv.appendChild(p);
-              quoteIndex = (quoteIndex + 1) % data.length;
-          }
-
-          updateQuote();
-          setInterval(updateQuote, 10000);
-
-          // Get the modal
-          var modal = document.getElementById("myModalQuotes");
-
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close")[0];
-
-          // When the user clicks on the quoteBug, open the modal 
-          modal.style.display = "block";
-
-          // When the user clicks on <span> (x), close the modal
-          span.onclick = function() {
-            modal.style.display = "none";
-          }
-
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-            if (event.target == modal) {
-              modal.style.display = "none";
-            }
-          }
-      });
-}); 
-*/
-
-// API QUOTES FUNCTIONALITY
 
 document.getElementById('quoteBug').addEventListener('click', function() {
   
@@ -247,7 +200,7 @@ document.getElementById('quoteBug').addEventListener('click', function() {
       })
       .then(function(data) {
           var quotesDiv = document.getElementById('modalQuotes');
-          var quoteIndex = 0;
+          var quoteIndex = 7;
 
           function updateQuote() {
               quotesDiv.innerHTML = '';
