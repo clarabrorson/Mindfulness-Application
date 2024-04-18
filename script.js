@@ -213,17 +213,21 @@ document.getElementById('quoteBug').addEventListener('click', function() {
 
         var quotesDiv = document.getElementById('modalQuotes');
         var quoteIndex = 7;
-
+       
+        // This function is used to update the quote displayed in the modal
         function updateQuote() {
-            quotesDiv.innerHTML = '';
-            var p = document.createElement('p');
-            p.innerText = apiQuotes[quoteIndex].text;
-            quotesDiv.appendChild(p);
-            quoteIndex = (quoteIndex + 1) % apiQuotes.length;
-        }
-
+          quotesDiv.innerHTML = '';
+          var div = document.createElement('div');
+          div.className = 'quoteContainer';
+          var p = document.createElement('p');
+          p.innerText = apiQuotes[quoteIndex].text;
+          div.appendChild(p);
+          quotesDiv.appendChild(div);
+          quoteIndex = (quoteIndex + 1) % apiQuotes.length;
+      }
+        // This code is used to update the quote every 10 seconds
         updateQuote();
-        setInterval(updateQuote, 10000);
+        setInterval(updateQuote, 7000);
 
           var modal = document.getElementById("myModalQuotes");
 

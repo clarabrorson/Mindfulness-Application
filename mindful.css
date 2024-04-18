@@ -201,6 +201,18 @@ the modal-content class is for the content inside the modal, and the close class
   font-weight: 100;
   font-style: italic;
 }
+/* This class is connected to the div that holds the quotes. It is used to center the text. 
+  The flex properties allow the div to behave like a flex container */
+.quoteContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.quoteContainer p {
+  text-align: center;
+}
 
 /* MENU
 This code styles the menu and the menu items.
@@ -261,7 +273,7 @@ The box-shadow property is used to create a glowing effect.
   box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
 }
 
-/* triangle on play button
+/* Triangle on play button
 The pseudo-element ::after is used to create the triangle on the play button.
 The different properties are used to create the triangle shape and style it.
 */
