@@ -6,6 +6,15 @@
     <title>Yoga</title>
 </head>
 <body>
+
+    <div id="videoContainer">
+        <img id="thumbnail" src="yoga.png" alt="Video thumbnail" style="cursor: pointer;">
+    </div>
     
+    <script>
+        document.getElementById('thumbnail').addEventListener('click', function() {
+            this.outerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/tAUf7aajBWE?si=7VUerA02gs_yHHD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+        });
+    </script>
 </body>
 </html>
