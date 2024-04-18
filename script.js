@@ -198,31 +198,41 @@ document.getElementById('quoteBug').addEventListener('click', function() {
       .then(function(response) {
           return response.json();
       })
-      .then(function(data) {
-          var quotesDiv = document.getElementById('modalQuotes');
-          var quoteIndex = 7;
 
-          function updateQuote() {
-              quotesDiv.innerHTML = '';
-              var p = document.createElement('p');
-              p.innerText = data[quoteIndex].text;
-              quotesDiv.appendChild(p);
-              quoteIndex = (quoteIndex + 1) % data.length;
-          }
+      .then(function(apiQuotes) {
+        
+        var ownQuotes = [
+            { text: "The season of failure is the best time for sowing the seeds of success." },
+            { text: "If the plan doesn't work, change the plan, but never the goal." },
+            
+        ];
 
-          updateQuote();
-          setInterval(updateQuote, 10000);
+        // Places my quotes at desired indexpositions in the array
+        apiQuotes.splice(8, 0, ownQuotes[0]); 
+        apiQuotes.splice(9, 0, ownQuotes[1]); 
 
-          // Get the modal
+        var quotesDiv = document.getElementById('modalQuotes');
+        var quoteIndex = 7;
+
+        function updateQuote() {
+            quotesDiv.innerHTML = '';
+            var p = document.createElement('p');
+            p.innerText = apiQuotes[quoteIndex].text;
+            quotesDiv.appendChild(p);
+            quoteIndex = (quoteIndex + 1) % apiQuotes.length;
+        }
+
+        updateQuote();
+        setInterval(updateQuote, 10000);
+
           var modal = document.getElementById("myModalQuotes");
 
-          // Get the <span> element that closes the modal
-          var span = document.getElementsByClassName("close-myModalQuotes")[0]; // Change "close" to "close-myModalQuotes"
+          var span = document.getElementsByClassName("close-myModalQuotes")[0]; 
 
-          // When the user clicks on the quoteBug, open the modal 
+          // When the user clicks on the quoteBug the modal opens
           modal.style.display = "block";
 
-          // When the user clicks on <span> (x), close the modal
+          // When the user clicks on <span> (x) the modal closes
           span.onclick = function() {
             modal.style.display = "none";
           }
