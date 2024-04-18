@@ -152,6 +152,16 @@ window.onclick = function(event) {
 
 // BACKGROUND SELECTION FUNCTIONALITY
 // This function lets the user select a background image
+
+// Preload images to avoid delay when changing background
+// This array is used to store the images before they are loaded, this will prevent the images from being loaded when the user selects a background
+const images = ['forest-6761846.jpg', 'sunset-6911736.jpg', 'water-2208931.jpg'];
+
+images.forEach(image => {
+    const img = new Image();
+    img.src = image;
+});
+
 const backgroundSelect = document.getElementById('background-select');
 
 // This event listener is used to listen for clicks on the buttons
