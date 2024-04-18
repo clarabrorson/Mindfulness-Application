@@ -82,7 +82,7 @@ document.getElementById('menu').addEventListener('mouseout', function() {
     document.getElementById('menu-items').style.display = 'none';
 });
 
-// This function get the play button and the audio element from the HTML
+// This function gets the play button and the audio element from the HTML
 // The addEventListener() function is used to listen for a click event on the play button
 document.querySelector('.play-btn').addEventListener('click', function() {
   var audio = document.getElementById('background_music');
@@ -101,7 +101,7 @@ let wasMusicPlaying = false;
 btns.forEach((btn, index) => {
   btn.onclick = function(event) {
     event.preventDefault();
-    wasMusicPlaying = !document.getElementById('background_music').paused; // Kontrollera om musiken spelades
+    wasMusicPlaying = !document.getElementById('background_music').paused;
     audios.forEach((audio, audioIndex) => {
       if(audioIndex === index) {
         audio.style.display = "block";
