@@ -259,6 +259,7 @@ The menu class is for the menu itself, the menu-bar class is for the menu bar ic
 .yoga {
   color:  rgba(255, 0, 128, 0.8) !important; 
   font-weight: 1000 !important;
+  font-size: 20px; 
 }
 
 
@@ -269,8 +270,8 @@ The box-shadow property is used to create a glowing effect.
 */
 
 .play-btn {
-  width: 50px; 
-  height: 50px; 
+  width: 60px; 
+  height: 60px; 
   background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
   border-radius: 50%;
   position: fixed; 
@@ -318,8 +319,8 @@ The different properties are used to create the triangle shape and style it.
    The box-shadow property is used to create a glowing effect.
  */
 .bg-btn {
-  width: 50px; 
-  height: 50px; 
+  width: 60px; 
+  height: 60px; 
   background: radial-gradient( rgba(20, 18, 19, 0.8) 60%, rgba(0, 0, 0, 0) 62%);
   border-radius: 50%;
   position: relative; 
