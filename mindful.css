@@ -256,6 +256,12 @@ The menu class is for the menu itself, the menu-bar class is for the menu bar ic
   font-weight: 100;
 }
 
+.yoga {
+  color:  rgba(255, 0, 128, 0.8) !important; 
+  font-weight: 1000 !important;
+}
+
+
 /* PLAY BUTTON
 This code styles the play button.
 Radial gradient is used to create the button, and a triangle is created using borders.

@@ -46,16 +46,19 @@ var audios = document.querySelectorAll("#myModal audio");
 // The buttons are clicked when the user selects a meditation from the menu
 
 btns.forEach((btn, index) => {
-  btn.onclick = function(event) {
-    event.preventDefault();
-    audios.forEach((audio, audioIndex) => {
-      if(audioIndex === index) {
-        audio.style.display = "block";
-      } else {
-        audio.style.display = "none";
-      }
-    });
-    modal.style.display = "block";
+  // Check if the link has the class 'yoga'
+  if (!btn.classList.contains('yoga')) { // if the link does not have the class 'yoga', then add an event listener that will display modal (Helped by CHATGPT)
+    btn.onclick = function(event) {
+      event.preventDefault();
+      audios.forEach((audio, audioIndex) => {
+        if(audioIndex === index) {
+          audio.style.display = "block";
+        } else {
+          audio.style.display = "none";
+        }
+      });
+      modal.style.display = "block";
+    }
   }
 });
 
@@ -98,23 +101,27 @@ let wasMusicPlaying = false;
 
 // This forEach loop is used to add an event listener to each button element
 //When a button is clicked, the corresponding audio is played and the background music automatically pauses
+
+
 btns.forEach((btn, index) => {
-  btn.onclick = function(event) {
-    event.preventDefault();
-    wasMusicPlaying = !document.getElementById('background_music').paused;
-    audios.forEach((audio, audioIndex) => {
-      if(audioIndex === index) {
-        audio.style.display = "block";
-        audio.play();
-        document.getElementById('background_music').pause();
-      } else {
-        audio.style.display = "none";
-        if (!audio.paused) {
-          audio.pause();
+  if (!btn.classList.contains('yoga')) { 
+    btn.onclick = function(event) {
+      event.preventDefault();
+      wasMusicPlaying = !document.getElementById('background_music').paused;
+      audios.forEach((audio, audioIndex) => {
+        if(audioIndex === index) {
+          audio.style.display = "block";
+          audio.play();
+          document.getElementById('background_music').pause();
+        } else {
+          audio.style.display = "none";
+          if (!audio.paused) {
+            audio.pause();
+          }
         }
-      }
-    });
-    modal.style.display = "block";
+      });
+      modal.style.display = "block";
+    }
   }
 });
 
