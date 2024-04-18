@@ -18,8 +18,11 @@ p {
     font-size: 36px;
     margin-top: 20px;
     color: white;
+    position: relative;
+    top: -50px;
 }
 
 #thumbnail {
     width: 200px;
+    
   }
