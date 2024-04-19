@@ -16,16 +16,17 @@ body {
 }
 
 p {
-    font-size: 36px;
+    font-size: 32px;
     margin-top: 20px;
     color: white;
     position: relative;
-    top: -50px;
+    top: -100px;
+    font-weight: bold;
 }
 
 
 #thumbnail {
-    width: 200px;
+    width: 300px;
 }
 
 /*This container is used to hold the buttons.
