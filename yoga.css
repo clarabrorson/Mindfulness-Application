@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 body {
+    /*background: #224941 url('forest-6761846.jpg') no-repeat center center/cover; */
     background-color: black;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -61,6 +62,8 @@ p {
     align-items: center;
     cursor: pointer;
   }
+
+  
     
 
 
