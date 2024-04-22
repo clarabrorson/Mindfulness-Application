@@ -2,7 +2,7 @@
 
 ## Description
 
-This project serves as my thesis work, combining frontend technologies like HTML, CSS, and JavaScript with cloud services such as Azure to create a web application focused on mindfulness for coders. The purpose of this project is not only to master frontend technologies but also to explore how they can be integrated with cloud services. Mindful Coding is designed to enhance well-being and reduce stress among coders during coding sessions and in their overall work environment.
+This project serves as my thesis work, combining frontend technologies like HTML, CSS, and JavaScript with cloud services such as Azure to create a web application focused on mindfulness for developers. The purpose of this project is not only to master frontend technologies but also to explore how they can be integrated with cloud services. Mindful Coding is designed to enhance well-being and reduce stress among developers during coding sessions and in their overall work environment.
 
 ## Features
 
