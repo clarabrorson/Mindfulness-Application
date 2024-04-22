@@ -10,7 +10,7 @@
 
 /* This is the body of the page. It has a background image and the text is styled with the Poppins font.*/
 body {
-  background: #224941 url('forest-6761846.jpg') no-repeat center center/cover;
+  background: #0b0f0e url('forest-6761846.jpg') no-repeat center center/cover;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;

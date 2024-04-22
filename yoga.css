@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 body {
-    /*background: #224941 url('forest-6761846.jpg') no-repeat center center/cover; */
+    background: #224941 url('forest-6761846.jpg') no-repeat center center/cover; 
     background-color: black;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -26,7 +26,7 @@ p {
 
   #thumbnail {
     width: 300px;
-    box-shadow: 0 -10px 10px -10px rgba(105, 228, 146, 0.8), 0 10px 10px -10px rgba(74, 193, 113, 0.8);
+   
 }
 
 /*This container is used to hold the buttons.
@@ -51,7 +51,7 @@ p {
     position: relative; 
     margin-top: 10px;
     left: 10px;
-    box-shadow: 0px 0px 25px 3px rgba(237, 124, 178, 0.8);
+    box-shadow: 0px 0px 25px 3px rgba(238, 228, 233, 0.8);
     color: #fff;
     border: none;
     font-size: 10px;
