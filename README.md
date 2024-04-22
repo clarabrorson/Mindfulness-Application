@@ -14,7 +14,7 @@ This project serves as my thesis work, combining frontend technologies like HTML
 
 - API Quotes Functionality: Inspirational Zen quotes fetched from an API and displayed in a modal to motivate and inspire coders during breaks.
 
-- Stretching & Yoga: Access stretching and yoga exercises specifically designed for desk workers. Learn techniques for relieving tension, improving posture, and enhancing overall well-being during long coding sessions..
+- Stretching & Yoga: Access stretching and yoga exercises specifically designed for desk workers. Learn techniques for relieving tension, improving posture, and enhancing overall well-being during long coding sessions.
 
 ## Availability
 
