@@ -10,7 +10,9 @@
 
 <body>
     <h1>Mindful Coding</h1>
-    <!-- This is a container for selecting the background image. It contains a label and a dropdown select element. -->
+    <!-- This is a container for selecting the background image. 
+        It contains three buttons that allow the user to change the background image of the page.
+    -->
     <div class="background-select-container">
         <div class="label-container">
             <div id="background-select">
@@ -36,13 +38,20 @@
     <div class="pointer-container">
         <span class="pointer"></span>
     </div>
-
+ <!-- 
+    This is the background music for the page. It is hidden and set to autoplay and loop.
+    The source of the music is a link to an audio file stored in Azure Blob Storage.
+    The loop attribute is set to true so that the music will play continuously.
+    -->
 </div>
 <audio id="background_music" loop style="display: none;" autoplay>
     <source src="https://msdocsstoragefunction333.blob.core.windows.net/audio-container/celestial-atmo-padsound-120664.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
+<!--
+    This modal contains several audio controls for different mindfulness exercises. Each audio control has a unique id and source file.
+    -->
 <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close-myModal">&times;</span>
@@ -68,7 +77,10 @@
       </audio>
     </div>
 </div>
-
+<!--
+    This is the menu for the page. It contains several links to the different mindfulness exercises.
+    It also contains a link to the yoga page.
+    -->
 <div id="menu">
     <div class="menu-bar"></div>
     <div class="menu-bar"></div>
@@ -82,16 +94,22 @@
         <a href="yoga.html" class="yoga">Stretch & Yoga</a>
     </div>
 </div>
-
+<!-- 
+    This is the play button for the background music. 
+    -->
 <a class="play-btn" href="#" title="Play/Pause Music"></a>
-
+<!--
+    This is the quote modal. It contains a close button and a div to display the quote.
+    -->
 <div id="myModalQuotes" class="modalQuotes">
     <div class="modal-content">
       <span class="close-myModalQuotes">&times;</span>
       <div id="modalQuotes"></div>
     </div>
 </div>
-  
+  <!--
+    This button will display a quote when clicked. The button is styled as a bug and will display a tooltip when hovered over.
+    -->
   <div id="quoteBug" class="tooltip">
       <img src="ladybird.png" alt="bug" style="width: 50px; height: auto;">
       <span class="tooltiptext">Debug your mind with Zen-Quotes</span>

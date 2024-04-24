@@ -199,15 +199,17 @@ backgroundSelect.addEventListener('click', function(e) {
 
 // API QUOTES FUNCTIONALITY
 
+// This function is used to display quotes from an API in a modal
+// This event listener is used to listen for clicks on the quoteBug element
 document.getElementById('quoteBug').addEventListener('click', function() {
-  
+  // This fetch request is used to get quotes from the API
   fetch("https://type.fit/api/quotes")
       .then(function(response) {
           return response.json();
       })
 
       .then(function(apiQuotes) {
-        
+        // This array is used to store my own quotes
         var ownQuotes = [
             { text: "The season of failure is the best time for sowing the seeds of success." },
             { text: "If the plan doesn't work, change the plan, but never the goal." },
@@ -232,7 +234,7 @@ document.getElementById('quoteBug').addEventListener('click', function() {
           quotesDiv.appendChild(div);
           quoteIndex = (quoteIndex + 1) % apiQuotes.length;
       }
-        // This code is used to update the quote every 10 seconds
+        // This code is used to update the quote every 7 seconds
         updateQuote();
         setInterval(updateQuote, 7000);
 

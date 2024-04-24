@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+/* This is the body of the page. It has a simple design with a black background and white text. */
 body {
     background-color: black;
     color: white;
@@ -26,6 +27,7 @@ p {
     margin-top: 20px;
 }
 
+/* This div is the container for the text. It is surrounded by a border that expands when hovered over. */
 div {
     height: 100px;
     width: 300px;
@@ -38,6 +40,7 @@ div {
     will-change: transform;
 }
 
+/* The before and after pseudo-elements create the border around the div. */
 div::before,
 div::after {
     position: absolute;
@@ -49,23 +52,27 @@ div::after {
     transition: all 250ms ease-in-out;
 }
 
+/* The before pseudo-element creates the left border and gives an illusion of a border to the right. This is done with a box-shadow.*/
 div::before {
     width: 2px;
     height: 100px;
     box-shadow: 298px 0 deeppink;
 }
 
+/* The after pseudo-element creates the bottom border and gives an illusion of a border to the top. This is done with a box-shadow. */
 div::after {
     height: 2px;
     width: 300px;
     box-shadow: 0 98px deeppink;
 }
 
+/* The hover effect expands the border around the div. The value of the left property represents the amount of border expansion. */
 div:hover::before {
     left: -10px;
     box-shadow: 318px 0 deeppink;
 }
 
+/* The hover effect expands the border around the div. The value of the top property represents the amount of border expansion. */
 div:hover::after {
     top: -10px;
     box-shadow: 0 118px deeppink;
