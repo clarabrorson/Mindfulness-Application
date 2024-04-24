@@ -18,7 +18,7 @@ This project serves as my thesis work, combining frontend technologies like HTML
 
 ## Availability
 
-The web application will be hosted on Azure for a limited period. Please visit the provided link to access it directly. If the link is not available, you can still access the web application by following the steps outlined in the "Usage" section.
+[Mindful Coding](https://jolly-dune-01dcb3f03.5.azurestaticapps.net/index.html) will be hosted on Azure for a limited period. Please visit the provided link to access it directly. If the link is not available, you can still access the web application by following the steps outlined in the "Usage" section.
 
 ## Usage
 
@@ -28,9 +28,13 @@ The web application will be hosted on Azure for a limited period. Please visit t
 
 ## Credits
 
-This project uses a Breathing Circle Animation designed by [bradtraversy](https://github.com/bradtraversy/vanillawebprojects/tree/master/relaxer-app) 
+Breathing Circle Animation inspired by [bradtraversy](https://github.com/bradtraversy/vanillawebprojects/tree/master/relaxer-app) 
+
+The voice recordings used belongs to [Dr Peter Morgan](https://supervision.mindfulness-network.org/choose-a-supervisor/peter-morgan/)
+
+Music by audiovisual artist [Sam Francis](https://pixabay.com/sv/users/samuelfrancisjohnson-1207793/)
 
 
 ## License
 
-Include information about the license.
+[MIT LICENSE](LICENSE)
